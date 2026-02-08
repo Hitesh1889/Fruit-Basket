@@ -19,13 +19,13 @@ export const Fruit: React.FC<FruitProps> = ({ type, index, isTop }) => {
       exit={{ scale: 0, opacity: 0 }}
       transition={{ type: "spring", stiffness: 500, damping: 30 }}
       className={`
-        w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28
+        w-14 h-14 sm:w-16 sm:h-16 md:w-24 md:h-24 lg:w-28 lg:h-28
         flex items-center justify-center 
-        text-6xl md:text-7xl lg:text-8xl 
+        text-4xl sm:text-5xl md:text-7xl lg:text-8xl 
         select-none relative z-10
+        -mb-3 sm:-mb-4 md:-mb-5
       `}
       style={{
-        marginBottom: '-20px', // Slightly relaxed spacing so they don't hide each other too much
         zIndex: index,
       }}
     >

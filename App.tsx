@@ -182,32 +182,32 @@ const App: React.FC = () => {
       </div>
 
       {/* Header */}
-      <header className="px-4 py-4 md:py-6 flex justify-between items-center max-w-6xl mx-auto w-full z-20">
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-white/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center text-3xl border-2 border-green-100">🍓</div>
-          <div className="hidden md:block">
+      <header className="px-4 py-2 sm:py-4 md:py-6 flex justify-between items-center max-w-6xl mx-auto w-full z-20">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center text-2xl sm:text-3xl border-2 border-green-100">🍓</div>
+          <div className="hidden sm:block">
             <h1 className="font-display font-bold text-2xl md:text-3xl text-green-900 leading-none drop-shadow-md shadow-white">Fruit Basket</h1>
             <p className="text-xs text-green-800 font-bold uppercase tracking-widest ml-1 bg-white/50 px-2 py-0.5 rounded-full inline-block">Garden Mix</p>
           </div>
         </div>
 
-        <div className="flex items-center gap-6 bg-white/80 backdrop-blur-xl px-6 py-2 rounded-full shadow-lg border border-white/60">
+        <div className="flex items-center gap-4 sm:gap-6 bg-white/80 backdrop-blur-xl px-4 sm:px-6 py-2 rounded-full shadow-lg border border-white/60">
            <div className="text-center">
-             <span className="text-[10px] text-green-900/80 font-black uppercase block tracking-wider">Level</span>
-             <span className="font-display font-bold text-2xl text-green-900">{level}</span>
+             <span className="text-[8px] sm:text-[10px] text-green-900/80 font-black uppercase block tracking-wider">Level</span>
+             <span className="font-display font-bold text-xl sm:text-2xl text-green-900">{level}</span>
            </div>
-           <div className="w-px h-8 bg-green-900/10"></div>
+           <div className="w-px h-6 sm:h-8 bg-green-900/10"></div>
            <div className="text-center">
-             <span className="text-[10px] text-green-900/80 font-black uppercase block tracking-wider">Moves</span>
-             <span className="font-display font-bold text-2xl text-green-900">{moves}</span>
+             <span className="text-[8px] sm:text-[10px] text-green-900/80 font-black uppercase block tracking-wider">Moves</span>
+             <span className="font-display font-bold text-xl sm:text-2xl text-green-900">{moves}</span>
            </div>
         </div>
         
         <button 
           onClick={() => setSoundEnabled(!soundEnabled)}
-          className="p-3 rounded-full bg-white/80 hover:bg-white backdrop-blur shadow transition-all text-green-900"
+          className="p-2 sm:p-3 rounded-full bg-white/80 hover:bg-white backdrop-blur shadow transition-all text-green-900"
         >
-          {soundEnabled ? <Volume2 size={24} /> : <VolumeX size={24} />}
+          {soundEnabled ? <Volume2 size={20} className="sm:w-6 sm:h-6" /> : <VolumeX size={20} className="sm:w-6 sm:h-6" />}
         </button>
       </header>
 
@@ -229,7 +229,7 @@ const App: React.FC = () => {
         </AnimatePresence>
 
         {/* Baskets Grid */}
-        <div className="flex flex-wrap justify-center items-end gap-y-16 pb-24 px-2 md:px-8 w-full select-none">
+        <div className="flex flex-wrap justify-center items-end gap-y-12 sm:gap-y-16 pb-24 px-1 sm:px-2 md:px-8 w-full select-none max-w-7xl">
           <AnimatePresence mode="popLayout">
             {baskets.map((basket) => (
               <Basket
